@@ -1,5 +1,8 @@
 package it.epicode.classi.main;
 
+import it.epicode.classi.DAO.LocationDAO;
+import it.epicode.classi.DAO.PartecipazioneDAO;
+import it.epicode.classi.DAO.PersonaDAO;
 import it.epicode.classi.Evento;
 import it.epicode.classi.DAO.EventoDAO;
 import it.epicode.classi.Location;
@@ -19,6 +22,10 @@ public class Main {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("gestioneeventi");
         EntityManager em = emf.createEntityManager();
         EventoDAO eventoDao = new EventoDAO(em);
+        PersonaDAO personaDao = new PersonaDAO(em);
+        LocationDAO locationDao = new LocationDAO(em);
+        PartecipazioneDAO partecipazioneDao = new PartecipazioneDAO(em);
+
         Location location1 = new Location("Stadio", "Roma");
         Location location2 = new Location("Teatro", "Milano");
         Evento evento1 = new Evento("80 Voglia Disco Party", LocalDate.of(2025, 5, 12), "Revival Disco anni 80", TipoEvento.PUBBLICO, 53);
@@ -76,7 +83,52 @@ public class Main {
         Partecipazione partecipazione27 = new Partecipazione(persona8, Stato.CONFERMATO, evento3);
         Partecipazione partecipazione28 = new Partecipazione(persona9, Stato.CONFERMATO, evento4);
 
+        locationDao.save(location1);
+        locationDao.save(location2);
 
+        eventoDao.save(evento1);
+        eventoDao.save(evento2);
+        eventoDao.save(evento3);
+        eventoDao.save(evento4);
+
+        personaDao.save(persona1);
+        personaDao.save(persona2);
+        personaDao.save(persona3);
+        personaDao.save(persona4);
+        personaDao.save(persona5);
+        personaDao.save(persona6);
+        personaDao.save(persona7);
+        personaDao.save(persona8);
+        personaDao.save(persona9);
+        personaDao.save(persona10);
+
+        partecipazioneDao.save(partecipazione1);
+        partecipazioneDao.save(partecipazione2);
+        partecipazioneDao.save(partecipazione3);
+        partecipazioneDao.save(partecipazione4);
+        partecipazioneDao.save(partecipazione5);
+        partecipazioneDao.save(partecipazione6);
+        partecipazioneDao.save(partecipazione7);
+        partecipazioneDao.save(partecipazione8);
+        partecipazioneDao.save(partecipazione9);
+        partecipazioneDao.save(partecipazione10);
+        partecipazioneDao.save(partecipazione11);
+        partecipazioneDao.save(partecipazione12);
+        partecipazioneDao.save(partecipazione13);
+        partecipazioneDao.save(partecipazione14);
+        partecipazioneDao.save(partecipazione15);
+        partecipazioneDao.save(partecipazione16);
+        partecipazioneDao.save(partecipazione17);
+        partecipazioneDao.save(partecipazione18);
+        partecipazioneDao.save(partecipazione19);
+        partecipazioneDao.save(partecipazione20);
+        partecipazioneDao.save(partecipazione21);
+        partecipazioneDao.save(partecipazione22);
+        partecipazioneDao.save(partecipazione23);
+        partecipazioneDao.save(partecipazione24);
+        partecipazioneDao.save(partecipazione25);
+        partecipazioneDao.save(partecipazione26);
+        partecipazioneDao.save(partecipazione27);
 
 
 

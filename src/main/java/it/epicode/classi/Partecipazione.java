@@ -10,6 +10,7 @@ import java.util.List;
 @Table(name = "partecipazioni")
 public class Partecipazione {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
     private Persona persona;
