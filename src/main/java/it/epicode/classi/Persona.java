@@ -30,6 +30,14 @@ public class Persona {
         this.sesso = sesso;
         this.partecipazioni = partecipazioni;
     }
+
+    public Persona(String nome, String cognome, String email, LocalDate dataDiNascita, Sesso sesso) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.email = email;
+        this.dataDiNascita = dataDiNascita;
+        this.sesso = sesso;
+    }
     public Persona() {
     }
 

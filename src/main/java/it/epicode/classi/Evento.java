@@ -37,6 +37,14 @@ public class Evento {
         this.partecipazioni = partecipazioni;
     }
 
+    public Evento(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti) {
+        this.titolo = titolo;
+        this.dataEvento = dataEvento;
+        this.descrizione = descrizione;
+        this.tipoEvento = tipoEvento;
+        this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+    }
+
     public Evento() {
     }
 
@@ -86,5 +94,21 @@ public class Evento {
 
     public void setNumeroMassimoPartecipanti(int numeroMassimoPartecipanti) {
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public List<Partecipazione> getPartecipazioni() {
+        return partecipazioni;
+    }
+
+    public void setPartecipazioni(List<Partecipazione> partecipazioni) {
+        this.partecipazioni = partecipazioni;
     }
 }

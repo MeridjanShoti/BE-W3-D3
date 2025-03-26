@@ -22,6 +22,11 @@ public class Location {
         this.eventi = eventi;
     }
 
+    public Location(String nome, String città) {
+        this.nome = nome;
+        this.città = città;
+    }
+
     public Location() {}
 
     public long getId() {
