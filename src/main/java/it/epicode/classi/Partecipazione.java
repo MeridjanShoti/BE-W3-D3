@@ -14,6 +14,7 @@ public class Partecipazione {
     private long id;
     @ManyToOne
     private Persona persona;
+    @Enumerated(EnumType.STRING)
     private Stato stato;
     @ManyToOne
     private Evento evento;
