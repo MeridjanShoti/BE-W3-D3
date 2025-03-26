@@ -3,10 +3,10 @@ package it.epicode.classi.DAO;
 import it.epicode.classi.Evento;
 import jakarta.persistence.EntityManager;
 
-public class EventoDao {
+public class EventoDAO {
     private EntityManager em;
 
-    public EventoDao(EntityManager em) {
+    public EventoDAO(EntityManager em) {
         this.em = em;
     }
     public void save(Evento evento) {
