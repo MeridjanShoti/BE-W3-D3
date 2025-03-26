@@ -1,5 +1,6 @@
-package it.epicode.classi;
+package it.epicode.classi.DAO;
 
+import it.epicode.classi.Evento;
 import jakarta.persistence.EntityManager;
 
 public class EventoDao {

@@ -1,8 +1,11 @@
 package it.epicode.classi;
 
+import it.epicode.classi.enums.TipoEvento;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "eventi")
@@ -19,13 +22,19 @@ public class Evento {
     @Enumerated(EnumType.STRING)
     private TipoEvento tipoEvento;
     private int numeroMassimoPartecipanti;
+    @ManyToOne
+    private Location location;
+    @OneToMany(mappedBy = "evento")
+    private List<Partecipazione> partecipazioni = new ArrayList<>();
 
-    public Evento(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti) {
+    public Evento(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti, Location location, List<Partecipazione> partecipazioni) {
         this.titolo = titolo;
         this.dataEvento = dataEvento;
         this.descrizione = descrizione;
         this.tipoEvento = tipoEvento;
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+        this.location = location;
+        this.partecipazioni = partecipazioni;
     }
 
     public Evento() {
